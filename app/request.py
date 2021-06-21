@@ -1,4 +1,4 @@
-from . import requests,json
+from . import request
 from .models import Quote
 
 # Getting the quote base url
@@ -11,7 +11,7 @@ def configure_request(app):
 def getQuotes(): 
     # request.urlopen(base_url):
         
-        bbb = requests.get(base_url).json()
+        bbb = request.get(base_url).json()
        
         r = []
         id = bbb.get('id')
